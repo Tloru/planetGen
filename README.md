@@ -9,7 +9,7 @@ seed = 1 <br>
 genIco(size) <br>
 change = 1024 <br>
 repeat(5){ <br>
-subIco()
+subIco() <br>
 randIco(change) <br>
 change = change/2 <br>
 }
