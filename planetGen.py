@@ -9,7 +9,7 @@ def genIco(r, random):
         x.append(r+r.randint(0-random,random))
     return x
 
- def newVerts(q):
+def newVerts(q):
      y = 30
      for j in range(q-1):
          y = y*4
