@@ -1,3 +1,7 @@
+import random as ra
+
+#planetGen
+
 
 def seed(x,y=0):
     ra.seed(x)
@@ -104,4 +108,4 @@ print planet
 print
 print "sample planet generation at quality one (1) complete"
 print
-planet = subTri(planet)
+#planet = subTri(planet)
