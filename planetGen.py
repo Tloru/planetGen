@@ -115,18 +115,18 @@ def seed(x,y=0):
     ra.jumpahead(y)
 
 #tri1
-#     1
+#    1x
 #   /  \
 #  /    \
 # /      \
-#2 ______ 3
+#2y ____ 3z
 
 #tri2
-#2 ------ 3
+#2y ---- 3z
 # \      /
 #  \    /
 #   \  /
-#    1
+#    x
 
 alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 
@@ -182,8 +182,26 @@ def genIcoTri(x, r, random):
         tri.append("f[1]")
     return tri
 
-for j in range(20):
-    print(str(alphabet[j])+str(genIcoTri(j, 1000, 0)))
+def genPlanet(r, random):
+    dic = {}
+    for j in range(20):
+        dic[str(alphabet[j])] = genIcoTri(j, r, random)
+    return dic
+
+planet = genPlanet(1000, 0)
+print planet
 
 print
 print "sample planet generation at quality one (1) complete"
+print
+
+#----- not working yet
+
+def subTri(dic, t):
+    x = t[1]
+    if isinstance (x, str):
+        y = x[1]
+        y = dic[str(y)]
+    return x
+
+print subTri(planet, planet["b"])
