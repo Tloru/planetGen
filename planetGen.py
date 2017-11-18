@@ -195,13 +195,13 @@ print
 print "sample planet generation at quality one (1) complete"
 print
 
-#----- not working yet
-
 def subTri(dic, t):
+    z = dic
     x = t[1]
     if isinstance (x, str):
-        y = x[1]
-        y = dic[str(y)]
+        y = x[0]
+        y = z[str(y)]
+        x = y[int(x[2])-1]
     return x
 
 print subTri(planet, planet["b"])
