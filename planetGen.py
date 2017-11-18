@@ -195,13 +195,20 @@ print
 print "sample planet generation at quality one (1) complete"
 print
 
-def subTri(dic, t):
+def subTri(dic, t, random):
     z = dic
-    x = t[1]
-    if isinstance (x, str):
-        y = x[0]
-        y = z[str(y)]
-        x = y[int(x[2])-1]
-    return x
+    w = []
+    for j in range(3):
+        x = t[j]
+        if isinstance (x, str):
+            y = x[0]
+            y = z[str(y)]
+            x = y[int(x[2])-1]
+        w.append(x)
+    #w is now three points in triangle.
+    t = w
+    for j in range(3):
+        tri.append(r+(ra.uniform(0-random,random)))
 
-print subTri(planet, planet["b"])
+
+print subTri(planet, planet["a"])
