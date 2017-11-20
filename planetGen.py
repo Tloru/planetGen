@@ -26,7 +26,7 @@ def divide(li, section = "All"): #this function divides a face of the planet int
     return nLi #returns the subdivided list
 
 for j in range(quality): #repeats the amout nescary for each value to represent roughly a meter of space (13 times)
-    pVari = pVari / 2 #makes things less random as they get smaller
+    pVari = pVari / 3 #makes things less random as they get smaller
     a = divide(a) #divides the top
     b = divide(b) #divides the front
     c = divide(c) #divides the left
